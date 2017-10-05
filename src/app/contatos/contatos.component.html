@@ -1,0 +1,50 @@
+ <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+    <header class="mdl-layout__header">
+        <div class="mdl-layout__header-row">
+            <button class="menu-align" md-button (click)="sidenav.open()">
+                <i class="material-icons">menu</i>
+            </button>
+            <span class="mdl-layout-title menu-align">Meus Contatos</span>
+        </div>
+    </header>
+    <main class="mdl-layout__content hight-100pc">
+        <div class="page-content hight-100pc">
+            
+             <md-sidenav-container>
+                <md-sidenav #sidenav >
+             
+                    <button class="botao-sair" md-button (click)="sair($event)">
+                        Sair
+                    </button>
+
+                    <div class="mdl-grid">
+                        <div class="mdl-cell--4-col-phone mdl-cell--6-col-desktop mdl-cell--3-offset-desktop mdl-cell--8-col-tablet">
+                            <h4>Meus dados</h4>
+                            <p>Luan Santos</p>
+                            <p>(10) 91234-3212</p>
+                            <p>luan@email.com</p>
+                        </div>
+                    </div>
+                                       
+                </md-sidenav>
+            
+                
+                <div class="mdl-grid">
+                    <md-list class="mdl-cell--4-col-phone mdl-cell--6-col-desktop mdl-cell--3-offset-desktop mdl-cell--8-col-tablet">
+                        <md-list-item *ngFor="let contato of contatos">
+                            <span >{{ contato.nome }}</span>
+                            <div class="mdl-layout-spacer"></div>
+                            <button md-icon-button>
+                                <i class="material-icons" (click)="editarContato($event)">edit</i>
+                            </button>
+                        </md-list-item>
+                    </md-list>
+                </div>
+            
+            </md-sidenav-container>
+            <button (click)="adicionarContato($event)" md-fab class="fixed-bottom-right">
+                <i class="material-icons">add</i>
+            </button>
+        </div>
+    </main>
+</div>

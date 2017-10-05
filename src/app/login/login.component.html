@@ -1,0 +1,44 @@
+<div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+    <header class="mdl-layout__header">
+        <div class="mdl-layout__header-row">
+            <span class="mdl-layout-title">Login</span>              
+        </div>
+    </header>
+    <main class="mdl-layout__content">
+        <div class="page-content">
+            <div class="mdl-grid">
+                <div class="mdl-cell mdl-cell--4-col-phone mdl-cell--4-col-desktop mdl-cell--4-offset-desktop mdl-cell--4-col-tablet mdl-cell--2-offset-tablet space-heigth-20-px"></div>
+            </div>  
+            <form >
+                <div class="mdl-grid">  
+                    <div class="mdl-cell mdl-cell--4-col-phone mdl-cell--4-col-desktop mdl-cell--4-offset-desktop mdl-cell--4-col-tablet mdl-cell--2-offset-tablet">
+                        <md-form-field class="width-100-percent">
+                            <input (input)="login = $event.target.value" mdInput placeholder="Nome de usuário" type="text" id="login" autocomplete="off">
+                        </md-form-field>
+                        <md-form-field class="width-100-percent">
+                            <input (input)="senha = $event.target.value" mdInput placeholder="Senha" type="password" id="senha" autocomplete="off">
+                        </md-form-field>
+                    </div> 
+                </div>
+                <div class="mdl-grid">
+                    <div class="mdl-cell mdl-cell--4-col-phone mdl-cell--4-col-desktop mdl-cell--4-offset-desktop mdl-cell--4-col-tablet mdl-cell--2-offset-tablet space-heigth-20-px"></div>
+                </div>  
+                <div class="mdl-grid">
+                    <div class="mdl-cell mdl-cell--4-col-phone mdl-cell--4-col-desktop mdl-cell--4-offset-desktop mdl-cell--4-col-tablet mdl-cell--2-offset-tablet space-heigth-20-px"></div>
+                </div>  
+                <div class="mdl-grid"> 
+                    <div class="mdl-cell mdl-cell--4-col-phone mdl-cell--4-col-desktop mdl-cell--4-offset-desktop mdl-cell--4-col-tablet mdl-cell--2-offset-tablet">
+                        <button md-raised-button color="accent" (click)="entrar($event)" class="width-100-percent">
+                            Entrar
+                        </button>
+                    </div>
+                    <div class="mdl-cell mdl-cell--4-col-phone mdl-cell--4-col-desktop mdl-cell--4-offset-desktop mdl-cell--4-col-tablet mdl-cell--2-offset-tablet">
+                        <button md-button (click)="cadastrar($event)" class="width-100-percent">
+                            Cadastrar
+                        </button>
+                    </div>
+                </div>
+            </form> 
+        </div>
+    </main>
+</div>
